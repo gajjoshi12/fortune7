@@ -1,0 +1,585 @@
+/*
+  Fortune7 Casino - Premium Royal Styling
+  Custom font-face declarations and premium casino animations
+*/
+
+/* ========== CUSTOM FONTS ========== */
+@font-face {
+  font-family: 'Casko_Luxury_Demo-Regular';
+  src: url('/fonts/Casko_Luxury_Demo-Regular.woff2') format('woff2'),
+       url('/fonts/Casko_Luxury_Demo-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Leaffes-Regular';
+  src: url('/fonts/Leaffes-Regular.woff2') format('woff2'),
+       url('/fonts/Leaffes-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FONTSPRING_DEMO_-_Stapel-Regular';
+  src: url('/fonts/FONTSPRING_DEMO_-_Stapel-Regular.woff2') format('woff2'),
+       url('/fonts/FONTSPRING_DEMO_-_Stapel-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aftersick_DEMO-Book';
+  src: url('/fonts/Aftersick_DEMO-Book.woff2') format('woff2'),
+       url('/fonts/Aftersick_DEMO-Book.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aftersick_DEMO-SemiBold';
+  src: url('/fonts/Aftersick_DEMO-SemiBold.woff2') format('woff2'),
+       url('/fonts/Aftersick_DEMO-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aftersick_DEMO-Regular';
+  src: url('/fonts/Aftersick_DEMO-SemiBold.woff2') format('woff2'),
+       url('/fonts/Aftersick_DEMO-SemiBold.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========== CASINO PREMIUM CSS VARIABLES ========== */
+:root {
+  /* Royal Gold Palette */
+  --royal-gold: #d4af37;
+  --royal-gold-light: #f4d03f;
+  --royal-gold-dark: #b8860b;
+  --casino-gold: #e1b402;
+  --luxury-gold: #ffd700;
+  
+  /* Deep Purple/Black Palette */
+  --casino-black: #0d0c11;
+  --casino-dark: #0c0c11;
+  --royal-purple: #1a1625;
+  --deep-purple: #2d1f3d;
+  --accent-purple: #7385c1;
+  
+  /* Casino Red Accent */
+  --casino-red: #8b0000;
+  --casino-red-light: #dc143c;
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(13, 12, 17, 0.75);
+  --glass-border: rgba(212, 175, 55, 0.3);
+  
+  /* Premium Shadows */
+  --gold-glow: 0 0 20px rgba(212, 175, 55, 0.4);
+  --card-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
+  
+  /* Animation durations */
+  --animate-spin: spin 1s linear infinite;
+  --shimmer-width: 200px;
+}
+
+/* ========== BASE LAYER ========== */
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+    --ring: 215 20.2% 65.1%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --ring: 216 34% 17%;
+    --radius: 0.5rem;
+  }
+  
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    background-color: var(--casino-black);
+  }
+}
+
+/* ========== COMPONENTS LAYER ========== */
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+  
+  /* Premium Gold Gradient Text */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, var(--royal-gold-light) 0%, var(--royal-gold) 50%, var(--royal-gold-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Gold Shimmer Effect */
+  .gold-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .gold-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+    animation: shimmer-sweep 3s infinite;
+  }
+  
+  /* Premium Glass Card */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--card-shadow);
+  }
+  
+  /* Royal Gold Border */
+  .royal-border {
+    border: 2px solid transparent;
+    background: linear-gradient(var(--casino-black), var(--casino-black)) padding-box,
+                linear-gradient(135deg, var(--royal-gold), var(--royal-gold-dark), var(--royal-gold)) border-box;
+  }
+  
+  /* Premium Button Styles */
+  .btn-royal {
+    background: linear-gradient(135deg, var(--royal-gold) 0%, var(--royal-gold-dark) 100%);
+    color: var(--casino-black);
+    font-weight: 600;
+    padding: 12px 32px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .btn-royal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+  }
+  
+  .btn-outline-gold {
+    background: transparent;
+    border: 2px solid var(--royal-gold);
+    color: var(--royal-gold);
+    padding: 12px 32px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .btn-outline-gold:hover {
+    background: var(--royal-gold);
+    color: var(--casino-black);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+  
+  /* VIP Package Card */
+  .vip-card {
+    background: linear-gradient(145deg, rgba(26, 22, 37, 0.9) 0%, rgba(13, 12, 17, 0.95) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .vip-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--royal-gold), transparent);
+  }
+  
+  .vip-card:hover {
+    border-color: var(--royal-gold);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(212, 175, 55, 0.2);
+  }
+  
+  /* Royal Divider */
+  .royal-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px 0;
+  }
+  
+  .royal-divider::before,
+  .royal-divider::after {
+    content: '';
+    height: 1px;
+    width: 100px;
+    background: linear-gradient(90deg, transparent, var(--royal-gold), transparent);
+  }
+  
+  /* Premium Section Title */
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    color: var(--royal-gold);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--royal-gold), transparent);
+  }
+  
+  /* Sticky Header Glass */
+  .header-glass {
+    background: rgba(13, 12, 17, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  }
+  
+  /* Gold Glow Effect */
+  .gold-glow {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+  }
+  
+  /* Casino Chip Animation Container */
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  /* Premium Price Tag */
+  .price-tag {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    color: var(--royal-gold);
+    font-size: 2rem;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  }
+}
+
+/* ========== PREMIUM KEYFRAME ANIMATIONS ========== */
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+@keyframes gold-pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes card-flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes chip-spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+  }
+  75% {
+    transform: rotate(270deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0%, 90%, to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+  30%, 60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes border-glow {
+  0%, 100% {
+    border-color: rgba(212, 175, 55, 0.3);
+  }
+  50% {
+    border-color: rgba(212, 175, 55, 0.8);
+  }
+}
+
+/* ========== ANIMATION UTILITY CLASSES ========== */
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-slide-left {
+  animation: slide-in-left 0.8s ease forwards;
+}
+
+.animate-slide-right {
+  animation: slide-in-right 0.8s ease forwards;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.6s ease forwards;
+}
+
+.animate-gold-pulse {
+  animation: gold-pulse 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-card-flip {
+  animation: card-flip 4s ease-in-out infinite;
+}
+
+.animate-chip-spin {
+  animation: chip-spin 8s linear infinite;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+.animate-border-glow {
+  animation: border-glow 2s ease-in-out infinite;
+}
+
+/* ========== GLOBAL STYLES ========== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--casino-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--royal-gold), var(--royal-gold-dark));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--royal-gold-light);
+}
+
+/* Selection Color */
+::selection {
+  background: rgba(212, 175, 55, 0.3);
+  color: var(--royal-gold);
+}

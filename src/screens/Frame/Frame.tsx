@@ -10,6 +10,7 @@ import { SplashScreen } from "./sections/SplashScreen";
 
 export const Frame = (): JSX.Element => {
   const [showSplash, setShowSplash] = useState(true);
+  const [showFullGallery, setShowFullGallery] = useState(false);
 
   return (
     <>
@@ -114,8 +115,8 @@ export const Frame = (): JSX.Element => {
               </div>
             </div>
 
-            {/* Row 2 - Mosaic Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
+            {/* Row 2 - Mosaic Grid (Hidden by default) */}
+            <div className={`grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 transition-all duration-700 ${showFullGallery ? 'opacity-100 max-h-[2000px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
               {[
                 { src: '/Fortune7_Credits_@Juno_works-03942.jpg', label: 'Casino Floor' },
                 { src: '/Fortune7_Credits_@Juno_works-03955.jpg', label: 'Elite Tables' },
@@ -142,8 +143,8 @@ export const Frame = (): JSX.Element => {
               ))}
             </div>
 
-            {/* Row 3 - Panoramic Strip */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {/* Row 3 - Panoramic Strip (Hidden by default) */}
+            <div className={`grid grid-cols-1 md:grid-cols-3 gap-4 transition-all duration-700 ${showFullGallery ? 'opacity-100 max-h-[2000px]' : 'opacity-0 max-h-0 overflow-hidden'}`}>
               {[
                 { src: '/Fortune7_Credits_@Juno_works-1-117.jpg', label: 'VIP Lounge' },
                 { src: '/Fortune7_Credits_@Juno_works-1-49.jpg', label: 'Premium Games' },
@@ -171,13 +172,16 @@ export const Frame = (): JSX.Element => {
 
           {/* View More CTA */}
           <div className="relative z-10 flex justify-center mt-16">
-            <button className="relative group px-10 py-4 overflow-hidden rounded-full">
+            <button
+              onClick={() => setShowFullGallery(!showFullGallery)}
+              className="relative group px-10 py-4 overflow-hidden rounded-full"
+            >
               <div className="absolute inset-0 bg-gradient-to-r from-royal-gold via-yellow-500 to-royal-gold opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-[2px] bg-casino-black rounded-full" />
               <span className="relative flex items-center gap-3 font-cinzel text-royal-gold text-base tracking-widest group-hover:text-yellow-400 transition-colors duration-300">
-                <span>VIEW FULL GALLERY</span>
-                <svg className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                <span>{showFullGallery ? 'SHOW LESS' : 'VIEW FULL GALLERY'}</span>
+                <svg className={`w-5 h-5 transition-transform duration-300 ${showFullGallery ? 'rotate-180' : 'group-hover:translate-x-2'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={showFullGallery ? "M5 15l7-7 7 7" : "M17 8l4 4m0 0l-4 4m4-4H3"} />
                 </svg>
               </span>
             </button>

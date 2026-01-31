@@ -1,11 +1,3 @@
-const navigationLinks = [
-  { text: "Things To Do", href: "#things-to-do" },
-  { text: "Menu", href: "#menu" },
-  { text: "Book A Table", href: "#book-a-table" },
-  { text: "Blogs", href: "#blogs" },
-  { text: "Contact", href: "#contact" },
-  { text: "House Rules", href: "#" },
-];
 
 const socialLinks = [
   { name: 'Facebook', icon: '📘', href: '#' },
@@ -27,7 +19,7 @@ export const BackgroundSection = (): JSX.Element => {
       </div>
 
       <div className="relative w-full py-16 md:py-20 px-6 md:px-12 lg:px-20">
-        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-8">
 
           {/* Column 1 - Brand & About */}
           <div className="flex flex-col gap-6">
@@ -63,24 +55,7 @@ export const BackgroundSection = (): JSX.Element => {
             </div>
           </div>
 
-          {/* Column 2 - Quick Links */}
-          <nav className="flex flex-col gap-4">
-            <h4 className="font-cinzel font-semibold text-royal-gold text-lg tracking-wide mb-2">
-              Quick Links
-            </h4>
-            {navigationLinks.map((link, index) => (
-              <a
-                key={index}
-                href={link.href}
-                className="font-nunito text-white/70 text-base tracking-wide hover:text-royal-gold hover:translate-x-2 transition-all duration-300 flex items-center gap-2 group"
-              >
-                <span className="text-royal-gold/0 group-hover:text-royal-gold transition-all duration-300">→</span>
-                {link.text}
-              </a>
-            ))}
-          </nav>
-
-          {/* Column 3 - Contact */}
+          {/* Column 2 - Contact */}
           <div id="contact" className="flex flex-col gap-4">
             <h4 className="font-cinzel font-semibold text-royal-gold text-lg tracking-wide mb-2">
               Contact Us
@@ -130,7 +105,7 @@ export const BackgroundSection = (): JSX.Element => {
 
             <div className="mt-2">
               <p className="font-nunito text-white/50 text-xs">
-                *Entry restricted to 21+ with valid ID
+                *Entry restricted to guests aged 21+ with valid ID
               </p>
             </div>
           </div>

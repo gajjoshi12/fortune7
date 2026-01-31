@@ -49,7 +49,7 @@ export const ReserveSection = (): JSX.Element => {
         {/* Stats Row */}
         <div className="flex flex-wrap justify-center gap-8 md:gap-16 mt-12">
           {[
-            { number: '24/7', label: 'Open Always' },
+            { number: '24/7', label: 'Always Open' },
             { number: '50+', label: 'Casino Games' },
             { number: '5★', label: 'VIP Service' },
             { number: '1000+', label: 'Happy Guests' },

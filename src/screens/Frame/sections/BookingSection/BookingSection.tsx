@@ -4,85 +4,92 @@ export const BookingSection = (): JSX.Element => {
       title: "Regular Package",
       price: "₹2,000",
       tier: "standard",
+      isCouple: false,
       details: [
-        "Multi Cuisine Veg, Non Veg Buffet Dinner",
+        "Multi-Cuisine Veg/Non Veg Dinner",
         "Snacks",
         "Live Performance",
         "House Brand Liquor",
-        "No OTPC",
+        "1000 OTPC",
       ],
     },
     {
-      title: "Regular-O Package",
-      price: "₹2,500",
+      title: "Regular Couple",
+      price: "₹3,000",
       tier: "standard",
+      isCouple: true,
       details: [
-        "Multi Cuisine Veg, Non Veg Buffet Dinner",
+        "Multi-Cuisine Veg/Non Veg Dinner",
         "Snacks",
         "Live Performance",
         "House Brand Liquor",
-        "Including 1000 OTPC",
-      ],
-    },
-    {
-      title: "Regular Couple Package",
-      price: "₹4,000",
-      tier: "standard",
-      details: [
-        "Multi Cuisine Veg, Non Veg Buffet Dinner",
-        "Snacks",
-        "Live Performance",
-        "House Brand Liquor",
-        "Included 1500 OTPC",
+        "2000 OTPC",
       ],
     },
     {
       title: "Premium Package",
-      price: "₹4,000",
+      price: "₹3,000",
       tier: "premium",
-      featured: true,
+      isCouple: false,
       details: [
-        "Multi Cuisine Veg, Non Veg Buffet Dinner",
+        "Multi-Cuisine Veg/Non Veg Dinner",
         "Snacks",
         "Live Performance",
         "Premium Brand Liquor",
-        "Included 2000 OTPC",
+        "2000 OTPC",
       ],
     },
     {
-      title: "Premium Couple Package",
-      price: "₹6,000",
+      title: "Premium Couple",
+      price: "₹5,000",
       tier: "premium",
+      isCouple: true,
       details: [
-        "Multi Cuisine Veg, Non Veg Buffet Dinner",
+        "Multi-Cuisine Veg/Non Veg Dinner",
         "Snacks",
         "Live Performance",
         "Premium Brand Liquor",
-        "Included 3000 OTPC",
+        "3000 OTPC",
       ],
     },
     {
       title: "VIP Package",
-      price: "₹7,000",
+      price: "₹5,000",
       tier: "vip",
+      isCouple: false,
       details: [
-        "Multi Cuisine Veg, Non Veg Buffet Dinner",
-        "Snacks, Live Performance",
-        "Foreign Brand Liquor",
-        "Included 4000 OTPC",
-      ],
-    },
-    {
-      title: "VIP Couple Package",
-      price: "₹10,000",
-      tier: "vip",
-      featured: true,
-      details: [
-        "Multi Cuisine Veg, Non Veg Buffet Dinner",
+        "Multi-Cuisine Veg/Non Veg Dinner",
         "Snacks",
         "Live Performance",
         "Foreign Brand Liquor",
-        "Included 7000 OTPC",
+        "4000 OTPC",
+      ],
+    },
+    {
+      title: "VIP Couple",
+      price: "₹8,000",
+      tier: "vip",
+      isCouple: true,
+      details: [
+        "Multi-Cuisine Veg/Non Veg Dinner",
+        "Snacks",
+        "Live Performance",
+        "Foreign Brand Liquor",
+        "6000 OTPC",
+      ],
+    },
+    {
+      title: "VVIP Package",
+      price: "₹10,000",
+      tier: "vip",
+      featured: true,
+      isCouple: false,
+      details: [
+        "Multi-Cuisine Veg/Non Veg Dinner",
+        "Snacks",
+        "Live Performance",
+        "Foreign Brand Liquor",
+        "10,000 OTPC",
       ],
     },
   ];
@@ -162,7 +169,7 @@ export const BookingSection = (): JSX.Element => {
                   <span className="font-cinzel font-bold text-royal-gold text-3xl md:text-4xl">
                     {pkg.price}
                   </span>
-                  <span className="font-nunito text-white/50 text-sm">/person</span>
+                  <span className="font-nunito text-white/50 text-sm">/{pkg.isCouple ? 'couple' : 'person'}</span>
                 </div>
               </div>
 
@@ -181,8 +188,8 @@ export const BookingSection = (): JSX.Element => {
               {/* Book Button */}
               <div className="mt-6 pt-4">
                 <button className={`w-full py-3 rounded-lg font-nunito font-semibold text-sm tracking-wide transition-all duration-300 ${pkg.tier === 'vip'
-                    ? 'btn-royal'
-                    : 'btn-outline-gold'
+                  ? 'btn-royal'
+                  : 'btn-outline-gold'
                   }`}>
                   SELECT PACKAGE
                 </button>

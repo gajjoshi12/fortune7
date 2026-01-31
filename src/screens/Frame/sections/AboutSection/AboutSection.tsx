@@ -93,7 +93,7 @@ export const AboutSection = (): JSX.Element => {
             <div className="flex items-center gap-3 mb-4">
               <span className="text-royal-gold text-2xl">🍽️</span>
               <h4 className="font-cinzel font-semibold text-royal-gold text-2xl md:text-3xl lg:text-4xl tracking-wide">
-                Exquisite Culinary
+                Exquisite Culinary Experience
               </h4>
             </div>
 

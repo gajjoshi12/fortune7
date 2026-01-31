@@ -41,8 +41,9 @@ export const AboutSection = (): JSX.Element => {
           <span className="h-[1px] w-24 md:w-40 bg-gradient-to-r from-transparent to-royal-gold/70" />
           <div className="flex items-center gap-2">
             <span className="text-royal-gold text-lg">♠</span>
-            <span className="text-royal-gold text-xl">◆</span>
+            <span className="text-royal-gold text-xl">♣</span>
             <span className="text-royal-gold text-lg">♠</span>
+            <span className="text-royal-gold text-xl">♣</span>
           </div>
           <span className="h-[1px] w-24 md:w-40 bg-gradient-to-l from-transparent to-royal-gold/70" />
         </div>
@@ -140,7 +141,7 @@ export const AboutSection = (): JSX.Element => {
               <img
                 className="relative w-full max-w-[500px] h-auto object-cover rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                 alt="Casino Experience"
-                src="/image-14.png"
+                src="/image-14.jpg"
               />
             </div>
           </div>
@@ -151,8 +152,8 @@ export const AboutSection = (): JSX.Element => {
           {/* Decorative Element */}
           <div className="flex items-center gap-4 mb-4">
             <span className="text-royal-gold text-2xl">♣</span>
-            <span className="text-royal-gold text-3xl">♦</span>
-            <span className="text-royal-gold text-2xl">♥</span>
+            <span className="text-royal-gold text-3xl">♠</span>
+            <span className="text-royal-gold text-2xl">♣</span>
           </div>
 
           <div className="flex items-center justify-center p-2">

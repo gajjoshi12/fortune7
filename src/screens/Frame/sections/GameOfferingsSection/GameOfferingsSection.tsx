@@ -7,7 +7,7 @@ export const GameOfferingsSection = (): JSX.Element => {
       <img
         className="absolute w-full h-full top-0 left-0 object-cover"
         alt="Game offerings background"
-        src="/img.png"
+        src="/img.jpg"
       />
 
       {/* Multi-layer Premium Overlay */}

@@ -2,7 +2,7 @@ export const IntroSection = (): JSX.Element => {
   return (
     <section
       className="relative w-full min-h-screen bg-cover bg-center overflow-hidden pt-20"
-      style={{ backgroundImage: "url(/image.png)" }}
+      style={{ backgroundImage: "url(/image.jpg)" }}
     >
       {/* Premium Dark Overlay with gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-casino-black/80 via-casino-black/60 to-casino-black" />

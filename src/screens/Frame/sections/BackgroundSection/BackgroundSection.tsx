@@ -1,9 +1,9 @@
 
 const socialLinks = [
-  { name: 'Facebook', icon: '📘', href: '#' },
-  { name: 'Instagram', icon: '📸', href: '#' },
-  { name: 'Twitter', icon: '🐦', href: '#' },
-  { name: 'WhatsApp', icon: '💬', href: '#' },
+  { name: 'Facebook', icon: '📘', href: 'https://www.facebook.com/fortune7casino' },
+  { name: 'Instagram', icon: '📸', href: 'https://www.instagram.com/fortune7casino' },
+  { name: 'Twitter', icon: '🐦', href: 'https://x.com/fortune7casino' },
+  { name: 'WhatsApp', icon: '💬', href: 'https://wa.me/919737797377' },
 ];
 
 export const BackgroundSection = (): JSX.Element => {
@@ -38,7 +38,7 @@ export const BackgroundSection = (): JSX.Element => {
             </div>
             <p className="font-nunito text-white/60 text-sm leading-relaxed">
               Experience the thrill of gaming in Goa's most prestigious casino.
-              Where luxury meets excitement.
+              Play like a King, Win like a King.
             </p>
             {/* Social Links */}
             <div className="flex gap-3 mt-2">
@@ -46,6 +46,8 @@ export const BackgroundSection = (): JSX.Element => {
                 <a
                   key={i}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-lg hover:border-royal-gold transition-all duration-300 hover:scale-110"
                   aria-label={social.name}
                 >
@@ -71,8 +73,8 @@ export const BackgroundSection = (): JSX.Element => {
 
             <div className="flex items-center gap-3">
               <span className="text-royal-gold text-lg">📞</span>
-              <a href="tel:+919876543210" className="font-nunito text-white/70 text-sm hover:text-royal-gold transition-colors">
-                +91 98765 43210
+              <a href="tel:+919737797377" className="font-nunito text-white/70 text-sm hover:text-royal-gold transition-colors">
+                +91 97377 97377
               </a>
             </div>
 

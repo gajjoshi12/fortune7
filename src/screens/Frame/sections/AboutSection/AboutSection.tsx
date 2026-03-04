@@ -30,7 +30,7 @@ export const AboutSection = (): JSX.Element => {
 
         <div className="flex items-center justify-center gap-2.5 p-4 flex-1">
           <p className="max-w-[580px] font-nunito text-white/80 text-base md:text-lg lg:text-xl font-normal tracking-wide leading-relaxed text-center lg:text-left">
-            Welcome to <span className="text-royal-gold font-semibold">Fortune 7 Casino</span>, where luxury meets excitement in the heart of Goa. Immerse yourself in cutting-edge gaming, savor victory at our exquisite restaurant, and bask in a VIP atmosphere. Dive into exclusive promotions, join our Rewards Club, and experience unforgettable moments at Fortune 7 – where the adventure never ends!
+            Welcome to <span className="text-royal-gold font-semibold">Fortune 7 Casino</span>, where you play like a King and win like a King, in the heart of Goa. Immerse yourself in cutting-edge gaming, savor victory at our exquisite restaurant, and bask in a VIP atmosphere. Dive into exclusive promotions, join our Rewards Club, and experience unforgettable moments at Fortune 7 – where the adventure never ends!
           </p>
         </div>
       </div>

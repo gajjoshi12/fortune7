@@ -3,6 +3,7 @@ import { AboutSection } from "./sections/AboutSection";
 import { BackgroundSection } from "./sections/BackgroundSection";
 import { BookingSection } from "./sections/BookingSection";
 import { GameOfferingsSection } from "./sections/GameOfferingsSection";
+import { SpinWheelSection } from "./sections/SpinWheelSection";
 import { HeaderSection } from "./sections/HeaderSection";
 import { IntroSection } from "./sections/IntroSection";
 import { ReserveSection } from "./sections/ReserveSection";
@@ -20,6 +21,7 @@ export const Frame = (): JSX.Element => {
         <IntroSection />
         <AboutSection />
         <GameOfferingsSection />
+        <SpinWheelSection />
         <BookingSection />
 
         {/* Gallery Section - Ultra Premium */}

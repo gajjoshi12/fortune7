@@ -87,7 +87,7 @@ export const SplashScreen = ({ onComplete }: { onComplete: () => void }): JSX.El
 
                 {/* Tagline */}
                 <p className="font-playfair text-white/60 text-lg md:text-xl italic mt-8 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-                    Where Luxury Meets Excitement
+                    Play like a King, Win like a King
                 </p>
 
                 {/* Loading Indicator */}

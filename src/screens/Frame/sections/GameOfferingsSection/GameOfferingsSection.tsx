@@ -1,4 +1,4 @@
-import { Button } from "../../../../components/ui/button";
+
 
 export const GameOfferingsSection = (): JSX.Element => {
   return (
@@ -57,7 +57,7 @@ export const GameOfferingsSection = (): JSX.Element => {
 
           {/* CTA Button */}
           <div className="mt-8 flex justify-center md:justify-start">
-            <button className="group relative overflow-hidden">
+            <a href="#book-a-table" className="group relative overflow-hidden">
               <div className="btn-royal flex items-center gap-3 relative z-10">
                 <span className="text-lg">♠</span>
                 <span>EXPLORE GAMES</span>
@@ -65,12 +65,12 @@ export const GameOfferingsSection = (): JSX.Element => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </div>
-            </button>
+            </a>
           </div>
 
           {/* Game Categories Pills */}
           <div className="flex flex-wrap gap-3 mt-8 justify-center md:justify-start">
-            {['Roulette', 'Blackjack', 'Poker', 'Baccarat', 'Slots'].map((game, i) => (
+            {['Roulette', 'Blackjack', 'Poker', 'Baccarat', 'Slots', 'Mini Flush', 'Andar Bahar', 'Casino War', 'Sic Bo', 'Indian Flush'].map((game, i) => (
               <span
                 key={game}
                 className="glass-card px-4 py-2 rounded-full text-white/80 text-sm font-nunito tracking-wide hover:border-royal-gold hover:text-royal-gold transition-all duration-300 cursor-pointer"

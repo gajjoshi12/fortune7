@@ -187,12 +187,17 @@ export const BookingSection = (): JSX.Element => {
 
               {/* Book Button */}
               <div className="mt-6 pt-4">
-                <button className={`w-full py-3 rounded-lg font-nunito font-semibold text-sm tracking-wide transition-all duration-300 ${pkg.tier === 'vip'
-                  ? 'btn-royal'
-                  : 'btn-outline-gold'
-                  }`}>
+                <a
+                  href={`https://wa.me/919737797377?text=${encodeURIComponent(`Hi! I'd like to book the ${pkg.title} (${pkg.price}${pkg.isCouple ? '/couple' : '/person'}) at Fortune 7 Casino.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`block w-full py-3 rounded-lg font-nunito font-semibold text-sm tracking-wide transition-all duration-300 text-center ${pkg.tier === 'vip'
+                    ? 'btn-royal'
+                    : 'btn-outline-gold'
+                    }`}
+                >
                   SELECT PACKAGE
-                </button>
+                </a>
               </div>
             </div>
           ))}
@@ -215,7 +220,7 @@ export const BookingSection = (): JSX.Element => {
         </p>
 
         <a
-          href="tel:+919876543210"
+          href="tel:+919737797377"
           className="mt-8 btn-royal flex items-center gap-3 text-lg animate-gold-pulse"
         >
           <span>📞</span>

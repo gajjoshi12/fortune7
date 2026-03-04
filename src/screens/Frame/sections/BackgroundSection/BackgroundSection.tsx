@@ -1,7 +1,7 @@
 
 const socialLinks = [
   { name: 'Facebook', icon: '📘', href: 'https://www.facebook.com/fortune7casino' },
-  { name: 'Instagram', icon: '📸', href: 'https://www.instagram.com/fortune7casino' },
+  { name: 'Instagram', icon: '📸', href: 'https://www.instagram.com/fortune7entertainment' },
   { name: 'Twitter', icon: '🐦', href: 'https://x.com/fortune7casino' },
   { name: 'WhatsApp', icon: '💬', href: 'https://wa.me/919737797377' },
 ];

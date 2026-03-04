@@ -74,6 +74,8 @@ export const Frame = (): JSX.Element => {
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110 group-hover:brightness-110"
                     alt="Fortune 7 Premium"
                     src="/Fortune7_Credits_@Juno_works-.jpg"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-casino-black via-casino-black/20 to-transparent" />
                   <div className="absolute inset-0 bg-royal-gold/0 group-hover:bg-royal-gold/10 transition-all duration-500" />
@@ -93,6 +95,8 @@ export const Frame = (): JSX.Element => {
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                       alt="Fortune 7 Gallery"
                       src="/Fortune7_Credits_@Juno_works-03908.jpg"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-casino-black/80 to-transparent" />
                     <div className="absolute bottom-3 left-3">
@@ -107,6 +111,8 @@ export const Frame = (): JSX.Element => {
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                       alt="Fortune 7 Gallery"
                       src="/Fortune7_Credits_@Juno_works-03923.jpg"
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-casino-black/80 to-transparent" />
                     <div className="absolute bottom-3 left-3">
@@ -132,6 +138,8 @@ export const Frame = (): JSX.Element => {
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-115 grayscale-[20%] group-hover:grayscale-0"
                       alt={item.label}
                       src={item.src}
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-casino-black via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
                     <div className="absolute inset-0 flex items-end justify-center pb-4">
@@ -159,6 +167,8 @@ export const Frame = (): JSX.Element => {
                       className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                       alt={item.label}
                       src={item.src}
+                      loading="lazy"
+                      decoding="async"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-casino-black via-casino-black/30 to-transparent" />
                     {/* Hover Overlay */}

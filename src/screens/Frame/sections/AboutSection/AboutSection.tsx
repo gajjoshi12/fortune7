@@ -81,6 +81,8 @@ export const AboutSection = (): JSX.Element => {
                 <img
                   src="/image12.jpg"
                   alt="Exquisite Culinary"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
                 />
                 {/* Overlay on hover */}
@@ -142,6 +144,8 @@ export const AboutSection = (): JSX.Element => {
                 className="relative w-full max-w-[500px] h-auto object-cover rounded-xl transition-transform duration-500 group-hover:scale-[1.02]"
                 alt="Casino Experience"
                 src="/image-14.jpg"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>

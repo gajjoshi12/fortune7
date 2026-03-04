@@ -8,6 +8,8 @@ export const GameOfferingsSection = (): JSX.Element => {
         className="absolute w-full h-full top-0 left-0 object-cover"
         alt="Game offerings background"
         src="/img.jpg"
+        loading="lazy"
+        decoding="async"
       />
 
       {/* Multi-layer Premium Overlay */}
